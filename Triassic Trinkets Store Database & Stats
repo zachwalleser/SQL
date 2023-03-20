@@ -1,0 +1,29 @@
+--Create a dinosaur merchandise store database.
+
+CREATE TABlE triassic_trinkets(id INTEGER PRIMARY KEY, name TEXT, description TEXT, price INTEGER, manufacturer TEXT, age_range TEXT);
+
+INSERT INTO triassic_trinkets VALUES (1, 'T-Rex', 'A realistic T-Rex figurine with movable arms and legs', 19.99, 'Schleich', 'Ages 3-8');
+INSERT INTO triassic_trinkets VALUES (2, 'Stegosaurus', 'A detailed Stegosaurus model with a moveable tail', 24.99, 'Papo', 'Ages 4-10');
+INSERT INTO triassic_trinkets VALUES (3, 'Triceratops', 'A soft and cuddly Triceratops plush toy', 14.99, 'Melissa & Doug', 'Ages 2-5');
+INSERT INTO triassic_trinkets VALUES (4, 'Dino Dig Kit', 'A fun excavation kit with a dinosaur surprise inside', 12.99, 'National Geographic', 'Ages 5-12');
+INSERT INTO triassic_trinkets VALUES (5, 'Jurassic World Lego Set', 'A buildable Jurassic World scene with minifigures', 49.99, 'LEGO', 'Ages 7-12');
+INSERT INTO triassic_trinkets VALUES (6, 'Dino Racer', 'A remote control car shaped like a dinosaur', 29.99, 'Kid Galaxy', 'Ages 4-8');
+INSERT INTO triassic_trinkets VALUES (7, 'Dino Puzzle', 'A colorful puzzle featuring various types of dinosaurs', 9.99, 'Melissa & Doug', 'Ages 3-6'); 
+INSERT INTO triassic_trinkets VALUES (8, 'Dino Playset', 'A set of small dinosaur figures with a playmat and accessories', 17.99, 'Imaginext', 'Ages 3-8');
+INSERT INTO triassic_trinkets VALUES (9, 'Dino Flashlight', 'A flashlight shaped like a T-Rex with sound effects', 7.99, 'Discovery Kids', 'Ages 4-10');
+INSERT INTO triassic_trinkets VALUES (10, 'Dino Book', 'A book about different types of dinosaurs with colorful illustrations', 6.99, 'National Geographic Kids', 'Ages 5-10');
+INSERT INTO triassic_trinkets VALUES (11, 'Dino Water Bottle', 'A BPA-free water bottle with a dinosaur design', 12.99, 'Skip Hop', 'Ages 3-12');
+INSERT INTO triassic_trinkets VALUES (12, 'Dino Backpack', 'A backpack with a dinosaur print and multiple compartments', 24.99, 'Wildkin', 'Ages 5-12');
+INSERT INTO triassic_trinkets VALUES (13, 'Dino Lunchbox', 'A lunchbox with a dinosaur design and an insulated interior', 16.99, 'Stephen Joseph', 'Ages 3-12');
+INSERT INTO triassic_trinkets VALUES (14, 'Dino Hoodie', 'A hoodie with a dinosaur graphic on the front and back', 29.99, 'Carter''s', 'Ages 2-8');
+INSERT INTO triassic_trinkets VALUES (15, 'Dino Hat', 'A hat with a dinosaur design and ear flaps', 13.99, 'Walleser', 'Ages 3-12');
+
+--Shows the prices of the following columns from the triassic_trinkets table in ascending order.
+SELECT name, description, price, manufacturer, age_range
+FROM triassic_trinkets
+ORDER BY price ASC;
+
+--What is the average price of all the items in triassic_trinkets?
+SELECT AVG(price) AS average_price
+FROM triassic_trinkets;
+SELECT * FROM triassic_trinkets;
