@@ -46,29 +46,29 @@ INSERT INTO Dinosaurs (name, diet, weight_kg, height_m, period, year_discovered,
   ('Sonorasaurus', 'Herbivore', 20000, 9, 'Early Cretaceous', 1994, 'Forests and wetlands', 21, 8, 45),
   ('Quetzalcoatlus', 'Piscivore', 250, 5, 'Late Cretaceous', 1971, 'Coastlines and wetlands', 11, 96, 30),
   ('Giganotosaurus', 'Carnivore', 8000, 4, 'Late Cretaceous', 1993, 'Forests and plains', 13, 42, 30),
-  ('Elasmosaurus', 'Carnivore', 1500, 4.5, 'Late Cretaceous', 1868, 'Shallow marine waters', 14, 32),
-  ('Kronosaurus', 'Carnivore', 12000, 9, 'Early Cretaceous', 1899, 'Marine waters', 30, 33),
-  ('Ichthyosaurus', 'Piscivore', 500, 2.5, 'Early Jurassic', 1821, 'Marine waters', 4, 28),
-  ('Liopleurodon', 'Carnivore', 4500, 6.5, 'Jurassic', 1988, 'Marine waters', 25, 40),
-  ('Dunkleosteus', 'Carnivore', 4000, 3, 'Late Devonian', 1867, 'Shallow marine waters', 10, 20),
-  ('Megalodon', 'Carnivore', 60000, 18, 'Miocene', 1835, 'Marine waters', 15, 56),
-  ('Mosasaurus', 'Carnivore', 15000, 7, 'Late Cretaceous', 1764, 'Marine waters', 18, 43),
-  ('Plesiosaurus', 'Piscivore', 1500, 4, 'Early Jurassic', 1824, 'Marine waters', 8, 22),
-  ('Tylosaurus', 'Carnivore', 5000, 7, 'Late Cretaceous', 1872, 'Marine waters', 14, 40),
-  ('Xiphactinus', 'Carnivore', 3500, 4.5, 'Late Cretaceous', 1901, 'Marine waters', 6.5, 50),
-  ('Shonisaurus', 'Piscivore', 20000, 21, 'Triassic', 1957, 'Marine waters', 21, 27),
-  ('Helicoprion', 'Carnivore', 500, 3, 'Permian to Triassic', 1899, 'Marine waters', 4, 25),
-  ('Hybodus', 'Carnivore', 150, 1, 'Triassic to Cretaceous', 1843, 'Marine waters', 1.5, 32),
-  ('Temnodontosaurus', 'Piscivore', 800, 2.5, 'Jurassic', 1850, 'Marine waters', 5.5, 30),
-  ('Stethacanthus', 'Carnivore', 20, 1, 'Carboniferous to Permian', 1843, 'Marine waters', 1, 20),
-  ('Leedsichthys', 'Piscivore', 45000, 16.5, 'Jurassic', 1889, 'Marine waters', 27, 37),
-  ('Alamosaurus', 'Herbivore', 20000, 12, 'Late Cretaceous', 1922, 'Terrestrial', 21, 11),
-  ('Futalognkosaurus', 'Herbivore', 38000, 13.5, 'Late Cretaceous', 2000, 'Terrestrial', 32, 7),
-  ('Muyelensaurus', 'Herbivore', 14000, 6, 'Late Cretaceous', 2005, 'Terrestrial', 17, 6),
-  ('Notocolossus', 'Herbivore', 60000, 16, 'Late Cretaceous', 2005, 'Terrestrial', 25, 9),
-  ('Puertasaurus', 'Herbivore', 50000, 10, 'Late Cretaceous', 2001, 'Terrestrial', 30, 8),
-  ('Bajadasaurus', 'Herbivore', 1400, 5, 'Late Cretaceous', 2018, 'Terrestrial', 9, 10),
-  ('Baryonyx', 'Piscivore', 2000, 3.5, 'Early Cretaceous', 1983, 'Aquatic', 9.5, 30);
+  ('Elasmosaurus', 'Carnivore', 1500, 4.5, 'Late Cretaceous', 1868, 'Shallow marine waters', 14, 32, 30),
+  ('Kronosaurus', 'Carnivore', 12000, 9, 'Early Cretaceous', 1899, 'Marine waters', 30, 33, 40),
+  ('Ichthyosaurus', 'Piscivore', 500, 2.5, 'Early Jurassic', 1821, 'Marine waters', 4, 28, 30),
+  ('Liopleurodon', 'Carnivore', 4500, 6.5, 'Jurassic', 1988, 'Marine waters', 25, 40, 30),
+  ('Dunkleosteus', 'Carnivore', 4000, 3, 'Late Devonian', 1867, 'Shallow marine waters',10, 20, 30),
+  ('Megalodon', 'Carnivore', 60000, 18, 'Miocene', 1835, 'Marine waters', 15, 56, 30),
+  ('Mosasaurus', 'Carnivore', 15000, 7, 'Late Cretaceous', 1764, 'Marine waters', 18, 43, 30),
+  ('Plesiosaurus', 'Piscivore', 1500, 4, 'Early Jurassic', 1824, 'Marine waters', 8, 22, 30),
+  ('Tylosaurus', 'Carnivore', 5000, 7, 'Late Cretaceous', 1872, 'Marine waters', 14, 40, 30),
+  ('Xiphactinus', 'Carnivore', 3500, 4.5, 'Late Cretaceous', 1901, 'Marine waters', 6.5, 50, 30),
+  ('Shonisaurus', 'Piscivore', 20000, 21, 'Triassic', 1957, 'Marine waters', 21, 27, 30),
+  ('Helicoprion', 'Carnivore', 500, 3, 'Permian to Triassic', 1899, 'Marine waters', 4, 25, 30),
+  ('Hybodus', 'Carnivore', 150, 1, 'Triassic to Cretaceous', 1843, 'Marine waters', 1.5, 32, 30),
+  ('Temnodontosaurus', 'Piscivore', 800, 2.5, 'Jurassic', 1850, 'Marine waters', 5.5, 30, 30),
+  ('Stethacanthus', 'Carnivore', 20, 1, 'Carboniferous to Permian', 1843, 'Marine waters', 1, 20, 30),
+  ('Leedsichthys', 'Piscivore', 45000, 16.5, 'Jurassic', 1889, 'Marine waters', 27, 37, 40),
+  ('Alamosaurus', 'Herbivore', 20000, 12, 'Late Cretaceous', 1922, 'Terrestrial', 21, 11, 80),
+  ('Futalognkosaurus', 'Herbivore', 38000, 13.5, 'Late Cretaceous', 2000, 'Terrestrial', 32, 7, 80),
+  ('Muyelensaurus', 'Herbivore', 14000, 6, 'Late Cretaceous', 2005, 'Terrestrial', 17, 6, 80),
+  ('Notocolossus', 'Herbivore', 60000, 16, 'Late Cretaceous', 2005, 'Terrestrial', 25, 9, 80),
+  ('Puertasaurus', 'Herbivore', 50000, 10, 'Late Cretaceous', 2001, 'Terrestrial', 30, 8, 80),
+  ('Bajadasaurus', 'Herbivore', 1400, 5, 'Late Cretaceous', 2018, 'Terrestrial', 9, 10, 80),
+  ('Baryonyx', 'Piscivore', 2000, 3.5, 'Early Cretaceous', 1983, 'Aquatic', 9.5, 30, 30);
  
  --Afterwards, the following SQL was used to investigate the data:
  
@@ -79,7 +79,7 @@ ORDER BY length_m DESC, top_speed_kph DESC
 LIMIT 10;
 
 --Then I grouped the dinosaurs by their average weight and height and compared their weight and height to the average for their species:
-SELECT name, species, diet, weight_kg,
+SELECT name, diet, weight_kg,
 CASE
 WHEN weight_kg > weight_kg_avg THEN "HIGHER"
 WHEN weight_kg < weight_kg_avg THEN "LOWER"
@@ -92,7 +92,7 @@ WHEN height_m < height_m_avg THEN "LOWER"
 ELSE "SAME"
 END AS "compared_to_average_height"
 FROM (
-SELECT name, species, diet, weight_kg,
+SELECT name, diet, weight_kg,
 (SELECT AVG(weight_kg) FROM dinosaurs) AS weight_kg_avg,
 height_m,
 (SELECT AVG(height_m) FROM dinosaurs) AS height_m_avg
