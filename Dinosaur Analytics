@@ -1,5 +1,5 @@
 --For this project, I gathered various data on different dinosaurs to create this table.
---Once created, I performed analystics on the data using SQL.
+--Once created, I performed analytics on the data using SQL.
 
 --Creating the table:
 CREATE TABLE Dinosaurs (
