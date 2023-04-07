@@ -1,0 +1,104 @@
+--For this project, I gathered various data on different dinosaurs to create this table.
+--Once created, I performed analystics on the data using SQL.
+
+--Creating the table:
+CREATE TABLE Dinosaurs (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  diet TEXT NOT NULL,
+  weight_kg INTEGER,
+  height_m INTEGER,
+  period TEXT NOT NULL,
+  year_discovered INTEGER NOT NULL,
+  habitat TEXT,
+  length_m INTEGER,
+  top_speed_kph INTEGER,
+  lifespan_years INTEGER
+);
+
+--Inserting the data into the table:
+INSERT INTO Dinosaurs (name, diet, weight_kg, height_m, period, year_discovered, habitat, length_m, top_speed_kph, lifespan_years) VALUES
+  ('Tyrannosaurus rex', 'Carnivore', 8000, 6, 'Late Cretaceous', 1902, 'Forests and plains', 12, 30, 30),
+  ('Velociraptor', 'Carnivore', 15, 1.8, 'Late Cretaceous', 1924, 'Grasslands', 2, 64, 10),
+  ('Stegosaurus', 'Herbivore', 2500, 4, 'Late Jurassic', 1877, 'Forests', 9, NULL, 26),
+  ('Triceratops', 'Herbivore', 9000, 3.5, 'Late Cretaceous', 1889, 'Plains', 9, 56, 30),
+  ('Brachiosaurus', 'Herbivore', 60000, 13, 'Late Jurassic', 1900, 'Forests and wetlands', 26, 25, 100),
+  ('Ankylosaurus', 'Herbivore', 5000, 1.5, 'Late Cretaceous', 1906, 'Forests and plains', 6, 10, 40),
+  ('Allosaurus', 'Carnivore', 2000, 4.6, 'Late Jurassic', 1877, 'Forests and plains', 12, 35, 25),
+  ('Apatosaurus', 'Herbivore', 20000, 4.5, 'Late Jurassic', 1877, 'Plains', 21, NULL, 25),
+  ('Argentinosaurus', 'Herbivore', 75000, 18, 'Late Cretaceous', 1987, 'Forests and wetlands', 30, 8, 50),
+  ('Carcharodontosaurus', 'Carnivore', 6000, 5, 'Early Cretaceous', 1927, 'Forests and plains', 13, 40, 20),
+  ('Dilophosaurus', 'Carnivore', 500, 1.5, 'Early Jurassic', 1942, 'Forests and plains', 6, 48, 10),
+  ('Iguanodon', 'Herbivore', 4000, 4.2, 'Early Cretaceous', 1825, 'Forests and wetlands', 9, 38, 30),
+  ('Spinosaurus', 'Carnivore', 20000, 15, 'Early Cretaceous', 1912, 'Rivers and wetlands', 18, 24, 35),
+  ('Pteranodon', 'Piscivore', NULL, 6, 'Late Cretaceous', 1876, 'Coastlines and wetlands', 10, 45, 20),
+  ('Parasaurolophus', 'Herbivore', 2000, 4.5, 'Late Cretaceous', 1920, 'Forests and plains', 10, 40, 25),
+  ('Deinonychus', 'Carnivore', 80, 1.8, 'Early Cretaceous', 1964, 'Forests', 3, 65, 10),
+  ('Protoceratops', 'Herbivore', 200, 1.2, 'Late Cretaceous', 1922, 'Deserts and grasslands', 2, 56, 20),
+  ('Edmontosaurus', 'Herbivore', 3000, 3.5, 'Late Cretaceous', 1917, 'Plains and forests', 12, 45, 25),
+  ('Gallimimus', 'Omnivore', 1000, 3, 'Late Cretaceous', 1972, 'Grasslands and plains', 8, 64, 15),
+  ('Pachycephalosaurus', 'Herbivore', 500, 2, 'Late Cretaceous', 1943, 'Forests and plains', 4, 50, 15),
+  ('Corythosaurus', 'Herbivore', 1000, 4, 'Late Cretaceous', 1914, 'Forests and wetlands', 9, 45, 25),
+  ('Suchomimus', 'Carnivore', 3000, 3.5, 'Early Cretaceous', 1997, 'Riverbanks and wetlands', 11, 35, 25),
+  ('Irritator', 'Carnivore', 1000, 3.5, 'Early Cretaceous', 1996, 'Forests and rivers', 8, 32, 20),
+  ('Dreadnoughtus', 'Herbivore', 59000, 14, 'Late Cretaceous', 2014, 'Forests and plains', 26, 10, 70),
+  ('Troodon', 'Carnivore', 70, 1, 'Late Cretaceous', 1855, 'Forests', 2.5, 56, 10),
+  ('Sonorasaurus', 'Herbivore', 20000, 9, 'Early Cretaceous', 1994, 'Forests and wetlands', 21, 8, 45),
+  ('Quetzalcoatlus', 'Piscivore', 250, 5, 'Late Cretaceous', 1971, 'Coastlines and wetlands', 11, 96, 30),
+  ('Giganotosaurus', 'Carnivore', 8000, 4, 'Late Cretaceous', 1993, 'Forests and plains', 13, 42, 30),
+  ('Elasmosaurus', 'Carnivore', 1500, 4.5, 'Late Cretaceous', 1868, 'Shallow marine waters', 14, 32),
+  ('Kronosaurus', 'Carnivore', 12000, 9, 'Early Cretaceous', 1899, 'Marine waters', 30, 33),
+  ('Ichthyosaurus', 'Piscivore', 500, 2.5, 'Early Jurassic', 1821, 'Marine waters', 4, 28),
+  ('Liopleurodon', 'Carnivore', 4500, 6.5, 'Jurassic', 1988, 'Marine waters', 25, 40),
+  ('Dunkleosteus', 'Carnivore', 4000, 3, 'Late Devonian', 1867, 'Shallow marine waters', 10, 20),
+  ('Megalodon', 'Carnivore', 60000, 18, 'Miocene', 1835, 'Marine waters', 15, 56),
+  ('Mosasaurus', 'Carnivore', 15000, 7, 'Late Cretaceous', 1764, 'Marine waters', 18, 43),
+  ('Plesiosaurus', 'Piscivore', 1500, 4, 'Early Jurassic', 1824, 'Marine waters', 8, 22),
+  ('Tylosaurus', 'Carnivore', 5000, 7, 'Late Cretaceous', 1872, 'Marine waters', 14, 40),
+  ('Xiphactinus', 'Carnivore', 3500, 4.5, 'Late Cretaceous', 1901, 'Marine waters', 6.5, 50),
+  ('Shonisaurus', 'Piscivore', 20000, 21, 'Triassic', 1957, 'Marine waters', 21, 27),
+  ('Helicoprion', 'Carnivore', 500, 3, 'Permian to Triassic', 1899, 'Marine waters', 4, 25),
+  ('Hybodus', 'Carnivore', 150, 1, 'Triassic to Cretaceous', 1843, 'Marine waters', 1.5, 32),
+  ('Temnodontosaurus', 'Piscivore', 800, 2.5, 'Jurassic', 1850, 'Marine waters', 5.5, 30),
+  ('Stethacanthus', 'Carnivore', 20, 1, 'Carboniferous to Permian', 1843, 'Marine waters', 1, 20),
+  ('Leedsichthys', 'Piscivore', 45000, 16.5, 'Jurassic', 1889, 'Marine waters', 27, 37),
+  ('Alamosaurus', 'Herbivore', 20000, 12, 'Late Cretaceous', 1922, 'Terrestrial', 21, 11),
+  ('Futalognkosaurus', 'Herbivore', 38000, 13.5, 'Late Cretaceous', 2000, 'Terrestrial', 32, 7),
+  ('Muyelensaurus', 'Herbivore', 14000, 6, 'Late Cretaceous', 2005, 'Terrestrial', 17, 6),
+  ('Notocolossus', 'Herbivore', 60000, 16, 'Late Cretaceous', 2005, 'Terrestrial', 25, 9),
+  ('Puertasaurus', 'Herbivore', 50000, 10, 'Late Cretaceous', 2001, 'Terrestrial', 30, 8),
+  ('Bajadasaurus', 'Herbivore', 1400, 5, 'Late Cretaceous', 2018, 'Terrestrial', 9, 10),
+  ('Baryonyx', 'Piscivore', 2000, 3.5, 'Early Cretaceous', 1983, 'Aquatic', 9.5, 30);
+ 
+ --Afterwards, the following SQL was used to investigate the data:
+ 
+ --First I grouped the top ten dinosaurs by their length and top speed:
+SELECT name, length_m, top_speed_kph
+FROM dinosaurs
+ORDER BY length_m DESC, top_speed_kph DESC
+LIMIT 10;
+
+--Then I grouped the dinosaurs by their average weight and height and compared their weight and height to the average for their species:
+SELECT name, species, diet, weight_kg,
+CASE
+WHEN weight_kg > weight_kg_avg THEN "HIGHER"
+WHEN weight_kg < weight_kg_avg THEN "LOWER"
+ELSE "SAME"
+END AS "compared_to_average_weight",
+height_m,
+CASE
+WHEN height_m > height_m_avg THEN "HIGHER"
+WHEN height_m < height_m_avg THEN "LOWER"
+ELSE "SAME"
+END AS "compared_to_average_height"
+FROM (
+SELECT name, species, diet, weight_kg,
+(SELECT AVG(weight_kg) FROM dinosaurs) AS weight_kg_avg,
+height_m,
+(SELECT AVG(height_m) FROM dinosaurs) AS height_m_avg
+FROM dinosaurs AS d);
+
+--Finally I averaged the life span and length of dinosaurs by their diet and habitat:
+SELECT diet, habitat, AVG(life_span) AS avg_life_span, AVG(length_m) AS avg_length
+FROM dinosaurs
+GROUP BY diet, habitat;
