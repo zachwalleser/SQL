@@ -1,5 +1,5 @@
 --For this project, I made a table with a set of characters from the first three films in the Jurassic Park franchise.
-Then I made more tables about things they do and joined them together.
+Then I made an additional table about their character dynamics and joined them together.
 
 --Once created, I performed analytics on the data using SQL.
 
