@@ -1,0 +1,81 @@
+--For this project, I made a table with a set of characters from the first three films in the Jurassic Park franchise.
+Then I made more tables about things they do and joined them together.
+
+--Once created, I performed analytics on the data using SQL.
+
+--Creating the table:
+
+CREATE TABLE characters 
+(id INTEGER PRIMARY KEY, 
+name TEXT, 
+species TEXT, 
+gender TEXT, 
+first_appearance TEXT);
+
+--Inserting the data into the table:
+
+INSERT INTO characters (id, name, species, gender, first_appearance) VALUES
+  (1, 'Alan Grant', 'Human', 'Male', 'Jurassic Park'),
+  (2, 'Ellie Sattler', 'Human', 'Female', 'Jurassic Park'),
+  (3, 'Ian Malcolm', 'Human', 'Male', 'Jurassic Park'),
+  (4, 'John Hammond', 'Human', 'Male', 'Jurassic Park'),
+  (5, 'Dennis Nedry', 'Human', 'Male', 'Jurassic Park'),
+  (6, 'Robert Muldoon', 'Human', 'Male', 'Jurassic Park'),
+  (7, 'Tim Murphy', 'Human', 'Male', 'Jurassic Park'),
+  (8, 'Lex Murphy', 'Human', 'Female', 'Jurassic Park'),
+  (9, 'Sarah Harding', 'Human', 'Female', 'The Lost World: Jurassic Park'),
+  (10, 'Nick Van Owen', 'Human', 'Male', 'The Lost World: Jurassic Park'),
+  (11, 'Roland Tembo', 'Human', 'Male', 'The Lost World: Jurassic Park'),
+  (12, 'Peter Ludlow', 'Human', 'Male', 'The Lost World: Jurassic Park'),
+  (13, 'Eric Kirby', 'Human', 'Male', 'Jurassic Park III'),
+  (14, 'Paul Kirby', 'Human', 'Male', 'Jurassic Park III'),
+  (15, 'Amanda Kirby', 'Human', 'Female', 'Jurassic Park III'),
+  (16, 'Billy Brennan', 'Human', 'Male', 'Jurassic Park III'),
+  (17, 'Cooper', 'Human', 'Male', 'Jurassic Park III'),
+  (18, 'Udesky', 'Human', 'Male', 'Jurassic Park III'),
+  (19, 'Nash', 'Human', 'Male', 'Jurassic Park III'),
+  (20, 'Ben Hildebrand', 'Human', 'Male', 'Jurassic Park III');
+  
+  --I repeat the same process with the second table, whcih tracks relationships between the characters:
+  
+  CREATE TABLE relationships (
+  id INTEGER PRIMARY KEY,
+  character1_id INTEGER,
+  character2_id INTEGER,
+  relationship_type TEXT,
+  movies_appeared_in TEXT
+);
+
+INSERT INTO relationships (id, character1_id, character2_id, relationship_type, movies_appeared_in) VALUES
+  (1, 1, 2, 'Colleagues', 'Jurassic Park, Jurassic Park III'),
+  (2, 1, 3, 'Acquaintances', 'Jurassic Park, Jurassic Park III'),
+  (3, 1, 6, 'Colleagues', 'Jurassic Park'),
+  (4, 2, 3, 'Romantic partners', 'Jurassic Park'),
+  (5, 3, 4, 'Employer/employee', 'Jurassic Park'),
+  (6, 3, 5, 'Enemies', 'Jurassic Park'),
+  (7, 4, 6, 'Employer/employee', 'Jurassic Park'),
+  (8, 9, 10, 'Colleagues', 'The Lost World: Jurassic Park'),
+  (9, 9, 11, 'Employer/employee', 'The Lost World: Jurassic Park'),
+  (10, 10, 11, 'Acquaintances', 'The Lost World: Jurassic Park'),
+  (11, 10, 12, 'Enemies', 'The Lost World: Jurassic Park'),
+  (12, 11, 12, 'Acquaintances', 'The Lost World: Jurassic Park'),
+  (13, 13, 15, 'Employer/employee', 'Jurassic Park III'),
+  (14, 13, 14, 'Colleagues', 'Jurassic Park III'),
+  (15, 14, 15, 'Romantic partners', 'Jurassic Park III'),
+  (16, 14, 16, 'Employer/employee', 'Jurassic Park III'),
+  (17, 13, 16, 'Acquaintances', 'Jurassic Park III'),
+  (18, 13, 17, 'Enemies', 'Jurassic Park III'),
+  (19, 14, 18, 'Acquaintances', 'Jurassic Park III'),
+  (20, 17, 19, 'Colleagues', 'Jurassic Park III');
+  
+--Afterwards, the following SQL was used to investigate the data:
+   
+--This query joins the characters table with the relationships table and only shows relationships that are marked as romantic partners:
+   
+SELECT c1.name AS character1, c2.name AS character2
+FROM characters c1
+INNER JOIN relationships r
+ON c1.id = r.character1_id
+INNER JOIN characters c2
+ON c2.id = r.character2_id
+WHERE r.relationship_type = 'Romantic partners' AND r.movies_appeared_in LIKE '%Jurassic Park%'  
